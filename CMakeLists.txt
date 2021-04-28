@@ -22,6 +22,16 @@ set(TORCH_PATH ${SOURCE_DIR})
 add_library(${PROJECT_NAME} SHARED IMPORTED)
 add_dependencies(${PROJECT_NAME} torch_ext_archive)
 
+enable_testing()
+add_executable(${PROJECT_NAME}-test
+    test/dummy_test.cc
+    )
+target_link_libraries(${PROJECT_NAME}-test
+    PRIVATE
+    ${TORCH_LIBRARIES}
+    )
+add_test(${PROJECT_NAME}-test ${PROJECT_NAME}-test)
+
 # manually install header, libraries and config files
 
 include(GNUInstallDirs)
