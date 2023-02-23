@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
 project(torch_cpp CXX)
 
-set(TORCH_URL https://download.pytorch.org/libtorch/cpu/libtorch-cxx11-abi-shared-with-deps-1.7.1%2Bcpu.zip)
-set(TORCH_URL_MD5 185c956c1b09afba574b83d6a7fba634)
+set(TORCH_URL https://download.pytorch.org/libtorch/cpu/libtorch-cxx11-abi-shared-with-deps-1.6.0%2Bcpu.zip)
+set(TORCH_URL_MD5 21c5ef08e13aaeb16ec7c2eb1c0e75e9)
 
 include(ExternalProject)
 ExternalProject_Add(torch_archive
